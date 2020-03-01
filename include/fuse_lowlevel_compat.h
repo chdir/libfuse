@@ -9,6 +9,9 @@
 /* these definitions provide source compatibility to prior versions.
    Do not include this file directly! */
 
+#ifndef _FUSE_LOWLEVEL_COMPAT_H_
+#define _FUSE_LOWLEVEL_COMPAT_H_
+
 struct fuse_lowlevel_ops_compat25 {
 	void (*init) (void *userdata);
 	void (*destroy) (void *userdata);
@@ -153,3 +156,5 @@ struct fuse_chan *fuse_chan_new_compat24(struct fuse_chan_ops_compat24 *op,
 
 int fuse_chan_receive(struct fuse_chan *ch, char *buf, size_t size);
 struct fuse_chan *fuse_kern_chan_new(int fd);
+
+#endif

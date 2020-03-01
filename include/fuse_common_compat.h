@@ -9,6 +9,9 @@
 /* these definitions provide source compatibility to prior versions.
    Do not include this file directly! */
 
+#ifndef _FUSE_COMMON_COMPAT_H_
+#define _FUSE_COMMON_COMPAT_H_
+
 struct fuse_file_info_compat {
 	int flags;
 	unsigned long fh;
@@ -24,3 +27,5 @@ int fuse_mount_compat22(const char *mountpoint, const char *opts);
 int fuse_mount_compat1(const char *mountpoint, const char *args[]);
 
 void fuse_unmount_compat22(const char *mountpoint);
+
+#endif
